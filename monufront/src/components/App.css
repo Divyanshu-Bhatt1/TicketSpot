@@ -1,0 +1,448 @@
+:root {
+  --primary-color: #ff7e01;
+  --secondary-color: #faa935;
+  --heading-color: #0b2727;
+  --text-color: #6e7074;
+  --font-name: "Montserrat", sans-serif;
+  --subtitle-font-name: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-name);
+}
+
+section {
+  padding: 50px 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul {
+  list-style: none;
+}
+
+.primary__btn {
+  background: var(--secondary-color) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 0.4rem 1.5rem !important;
+}
+
+.primary__btn a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.primary__btn a:hover {
+  color: inherit;
+}
+
+.secondary__btn {
+  background: transparent !important;
+  color: #0b2727 !important;
+  border: none !important;
+  font-weight: 500 !important;
+}
+
+.secondary__btn a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--heading-color);
+}
+
+.secondary__btn a:hover {
+  color: inherit;
+}
+
+.section__subtitle {
+  background: #faa935;
+  font-family: var(--subtitle-font-name);
+  width: max-content;
+  padding: 0px 0.5rem;
+  padding-right: 1rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: #0b2727;
+}
+
+/* =============== RESPONSIVE ================ */
+@media only screen and (max-width: 992px) {
+  .primary__btn a,
+  .secondary__btn a {
+    font-size: 0.9rem;
+  }
+
+  .primary__btn,
+  .secondary__btn,
+  .btn-dark {
+    padding: 0.2rem 1.1rem !important;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section__subtitle {
+    font-size: 1.3rem;
+  }
+}
+
+/* Light and Dark Mode Styles */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.navbar-profile {
+  padding: 10px; /* Adjust padding for better layout */
+  background-color: transparent; /* Ensure transparent background */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Make it clickable */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar Theme Toggle Button */
+.navbar-theme-toggle {
+  font-size: 2rem; /* Adjust font size for emojis */
+  padding: 10px;   /* Increase button padding */
+  background-color: transparent; /* Make background transparent */
+  border: none;   /* Remove border */
+  cursor: pointer; /* Pointer cursor for clickability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.navbar__theme-toggle-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--navbar-bg-color); /* Dynamic color based on theme */
+  border-bottom: 2px solid var(--text-color);
+}
+
+/* Define theme-specific variables */
+body.light-mode {
+  --navbar-bg-color: #ffffff; /* Light mode background */
+}
+
+body.dark-mode {
+  --navbar-bg-color: #121212; /* Dark mode background */
+}
+
+
+.navbar__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--heading-color);
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__menu li {
+  list-style: none;
+  margin-left: 2rem;
+}
+
+.navbar__menu li a {
+  font-size: 1rem;
+  color: var(--heading-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar__menu li a:hover {
+  color: var(--secondary-color);
+}
+
+.navbar__menu .navbar__item {
+  margin-right: 1.5rem;
+}
+
+.navbar__theme-toggle-button {
+  color: var(--heading-color);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.navbar__theme-toggle-button:hover {
+  color: var(--secondary-color);
+}
+
+/* Navbar Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .navbar__menu li {
+    margin: 1rem 0;
+  }
+
+  .navbar__theme-toggle-button {
+    margin-top: 1rem;
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Hero Section */
+.hero__subtitle img {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+.hero__content h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: var(--heading-color);
+  text-align: left;
+}
+
+.hero__content h1 .highlight {
+  color: var(--secondary-color);
+}
+
+.hero__content p {
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.4rem;
+}
+
+.hero__content {
+  padding-top: 3.5rem;
+}
+
+.hero__img-box,
+.hero__video-box {
+  width: 100%;
+  max-width: 100%; /* Ensure no overflow */
+  height: 200px;
+  overflow: hidden; /* Hide anything that overflows */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.hero__img-box img,
+.hero__video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the media covers the container without distortion */
+  object-position: top center; /* Adjust the position of the video to show more of the top part */
+  border-radius: 20px;
+}
+
+
+.hero__img-box {
+  padding-top: 2rem;
+}
+
+.hero__video-box {
+  display: flex; /* This can be toggled for showing video on smaller screens */
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+  margin: 0 auto; /* Center the content */
+  width: 90%; /* Adjust the width as needed */
+  max-width: 1200px; /* Prevent it from stretching too wide */
+}
+
+/* Experience Section */
+.experience__content h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.experience__content p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+.counter__wrapper {
+  margin-top: 1.6rem;
+}
+
+.counter__box span {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 10px 5px 10px 5px;
+}
+
+.counter__box h6 {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: var(--text-color);
+}
+
+.experience__img img {
+  width: 90%;
+}
+
+/* TESTIMONIAL SECTION */
+.testimonial__title {
+  font-size: 1.6rem;
+  margin-top: 0.8rem;
+  text-align: left;
+}
+
+/* Footer Styles */
+.footer__content {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #222;
+  color: #fff;
+  width: 100%;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 992px) {
+  .hero__content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero__img-box {
+    display: none;
+  }
+
+  .hero__video-box {
+    display: block;
+  }
+
+  .services__title,
+  .featured__tour-title,
+  .gallery__title,
+  .testimonial__title,
+  .experience__content h2 {
+    font-size: 2rem;
+  }
+
+  .experience__img {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero__content h1 {
+    font-size: 1.8rem;
+  }
+
+  .services__title,
+  .featured__tour-title,
+  .gallery__title,
+  .testimonial__title,
+  .experience__content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* To make sure the video stays in the background */
+}
+
+.hero-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

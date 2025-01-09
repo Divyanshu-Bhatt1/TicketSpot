@@ -1,0 +1,199 @@
+/* Make navbar fixed at the top */
+
+* {
+  position: relative;
+  overflow: visible;
+}
+
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  position: fixed;  /* Keep the navbar fixed at the top */
+  top: 0;  /* Stay at the top of the screen */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 0;  /* Remove any margin */
+  /* Added box-sizing to include padding in the total height calculation */
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  /* Removed margin-top to prevent unnecessary space */
+  margin: 0;  /* Removed margin-top */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  max-width: 100%;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.navbar-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  width: 500px;
+}
+
+.navbar-search-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search-input {
+  border: none;
+  background-color: transparent;
+  padding: 8px 16px;
+  font-size: 14px;
+  width: 100%;
+  margin-right: 15px;
+  outline: none;
+}
+
+.navbar-search-button {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-search-button:hover {
+  background-color: var(--primary-color);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar-item-wrapper.active {
+  border: 2px solid black;
+  background-color: transparent;
+}
+
+.navbar-item-wrapper .navbar-item {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-item-wrapper.active .navbar-item {
+  color: #FAA935;
+}
+
+.navbar-item-wrapper .navbar-item:hover {
+  color: #FAA935;
+}
+
+.navbar-profile {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  color: #FAA935;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-profile:hover {
+  background-color: #817d79;
+  border-radius:8%
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar-search {
+    max-width: 200px;
+  }
+
+  .navbar-item-label {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-search {
+    display: none;
+  }
+
+  .navbar-item {
+    margin-left: 15px;
+  }
+}
+
+.navbar-autocomplete-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.navbar-autocomplete-item {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-autocomplete-item:hover {
+  background-color: #f8f9fa;
+  color: black;
+}
+
+.loading-indicator {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999;
+}

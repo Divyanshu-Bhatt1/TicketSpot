@@ -1,0 +1,120 @@
+.event-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 468px) {
+  .event-card-container {
+    padding: 10px;
+  }
+}
+
+.ev-show-card {
+  width: calc(100% - 40px);
+  max-width: 400px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #f0f4f8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ev-show-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ev-show-card-header-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ev-show-del {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.ev-show-del:hover {
+  transform: scale(1.2);
+}
+
+.trash {
+  color: #dc3545;
+  font-size: 18px;
+}
+
+.ev-show-del:hover .trash {
+  color: #bb2d3b;
+}
+
+.ev-show-card-header {
+  font-size: 22px;
+  font-weight: 700;
+  color: #374b5c;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.ev-show-card-body {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.ev-show-spec-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border-bottom: 1px solid #e1e5e9;
+  padding: 0 10px;
+  font-weight: 500;
+  color: #666;
+}
+
+.ev-show-spec-txt:last-child {
+  border-bottom: none;
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-primary {
+  padding: 12px 25px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  padding: 12px 25px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b;
+  transform: translateY(-2px);
+}

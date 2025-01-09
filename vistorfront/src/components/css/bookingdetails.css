@@ -1,0 +1,101 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  
+  .modal-content .museum-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .modal-content p {
+    margin-bottom: 10px;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .modal-actions button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .close-button {
+    background-color: #95a5a6;
+    color: #fff;
+  }
+  
+  .close-button:hover {
+    background-color: #7f8c8d;
+  }
+  
+  .booking-status {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .booking-status.confirmed {
+    background-color: #27ae60;
+    color: #fff;
+  }
+  
+  .booking-status.cancelled {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .booking-status.pending {
+    background-color: #f39c12;
+    color: #fff;
+  }
+  
+  @media (max-width: 600px) {
+    .modal-content {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  

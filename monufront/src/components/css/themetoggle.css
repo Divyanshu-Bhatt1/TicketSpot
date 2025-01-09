@@ -1,0 +1,37 @@
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .toggle-track {
+    width: 56px;
+    height: 28px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-thumb {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sun-icon, .moon-icon {
+    color: #FCD34D;
+    font-size: 14px;
+  }
+  
+  .moon-icon {
+    color: #4B5563;
+  }
+  
+  

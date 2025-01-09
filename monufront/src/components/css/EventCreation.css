@@ -1,0 +1,119 @@
+/* Main Container Styling */
+.create-event-container {
+  width:100%;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ddd;
+  /* max-width: 800px; */
+}
+
+@media (max-width:468px)
+{
+  .create-event-container {
+    padding:20px;
+  }
+}
+
+.create-event-container h1, p{
+  text-align: start ;
+}
+
+/* Form Styling */
+.event-creation-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between form groups */
+}
+
+/* Form Group Styling */
+.event-creation-form-group {
+  flex: 1 1 calc(50% - 20px); /* Two columns per row */
+  display: flex;
+  flex-direction: column;
+}
+
+.event-creation-form-group.full-width {
+  flex: 1 1 100%; /* Full width for specific fields */
+}
+
+/* Label Styling */
+.event-creation-form-group label {
+  text-align: start;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Input Field Styling */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Textarea Styling */
+.textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Select Field Styling */
+.select-field {
+  width: 100%;
+  height: 40px;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  background-color: #fff;
+}
+
+/* Submit Button Styling */
+.submit-button {
+  width: 50%;
+  padding: 15px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #007BFE;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-creation-form-group {
+    flex: 1 1 100%; /* Stack all fields vertically on smaller screens */
+  }
+  .submit-button {
+    width: 100%;
+}
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.input-field.error-field {
+  border-color: red;
+}

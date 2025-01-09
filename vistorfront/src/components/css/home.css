@@ -1,0 +1,434 @@
+:root {
+  --primary-color     : #ff7e01;
+  --secondary-color   : #faa935;
+  --heading-color     : #0b2727;
+  --text-color        : #6e7074;
+  --font-name         : "Montserrat", sans-serif;
+  --subtitle-font-name: "Arial", sans-serif;  /* Change this to a non-cursive font */
+}
+
+/* Light mode styles (default) */
+body.light-mode {
+  --background-color: #fff;
+  --text-color: #000;
+  --primary-color: #ff7e01;
+  --secondary-color: #faa935;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  --background-color: #121212; /* Dark background */
+  --text-color: #fff;           /* Light text */
+  --primary-color: #ff7e01;     /* You can change the colors */
+  --secondary-color: #faa935;   /* Adjust for dark mode */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-name);
+}
+
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.navbar.light-mode {
+  background-color: var(--primary-color); /* Change these colors */
+  color: var(--background-color);
+}
+
+.navbar.dark-mode {
+  background-color: #222;
+  color: var(--text-color);
+}
+
+.toggle-mode-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+
+
+/* Recommended Places Carousel */
+.recommended-places {
+  padding: 3rem 0;
+}
+
+.carousel-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.carousel-image {
+  height: 60vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.carousel-caption h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+}
+
+/* Featured Places */
+.featured-places {
+  padding: 3rem 0;
+}
+
+.tour__card {
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tour__card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.tour__img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card__info {
+  padding: 1rem;
+}
+
+.tour__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 992px) {
+  .carousel-image {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-image {
+    height: 40vh;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .carousel-image {
+    height: 30vh;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+
+  .tour__img img {
+    height: 150px;
+  }
+}
+
+.container {
+  flex: 1;
+}
+
+/* Hero Section */
+.hero__subtitle img {
+  width : 2.3rem;
+  height: 2.3rem;
+}
+
+.hero__content h1 {
+  font-size    : 2.5rem;
+  font-weight  : 600;
+  margin-top   : 1rem;
+  margin-bottom: 2rem;
+  color        : black; /* Default color for mobile screens */
+  text-align   : left;
+}
+
+.hero__content h1 .highlight {
+  color: var(--secondary-color);
+}
+
+.hero__content p {
+  font-size  : 1rem;
+  color      : black; /* Default color for mobile screens */
+  line-height: 1.4rem;
+}
+
+.hero-video {
+  margin-top: 80px; /* Navbar height */
+  width: 100%;
+  height: 550px;
+  border-radius: 20px;
+  border: 1px solid var(--secondary-color);
+  object-fit: cover;
+  filter: brightness(70%);
+  z-index: -1;
+  display: block;
+  position: relative; /* Needed if adding gradients or shadows */
+}
+
+.hero-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Same as navbar height */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 0;
+}
+
+
+
+.hero__img-box img {
+  width        : 100%;
+  height       : 350px;
+  border-radius: 20px;
+  border       : 1px solid var(--secondary-color);
+  object-fit   : cover;
+  display      : none; /* Hide images by default */
+}
+
+.hero__content {
+  padding-top: 3.5rem;
+}
+
+.hero__img-box {
+  padding-top: 2rem;
+}
+
+/* Media Query for larger screens */
+@media only screen and (min-width: 768px) {
+  .hero-video {
+    display: block; /* Display video on larger screens */
+  }
+
+  .hero__img-box img {
+    display: none; /* Hide images on larger screens */
+  }
+
+  /* White text on larger screens */
+  .hero__content h1, 
+  .hero__content p {
+    color: white; 
+  }
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .hero-video {
+    display: none; /* Hide video on smaller screens */
+  }
+
+  .hero__img-box img {
+    display: block; /* Show images on smaller screens */
+  }
+
+  /* Black text on smaller screens */
+  .hero__content h1, 
+  .hero__content p {
+    color: black; 
+  }
+}
+
+/* Search Bar */
+.search-bar-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 600px;
+}
+
+.search-input {
+  padding: 10px;
+  width: 70%;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #faa935;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Carousel */
+.carousel-container {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.carousel-container h2 {
+  margin-bottom: 20px;
+}
+
+.carousel-image {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px; /* Adds slightly rounded borders */
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+  margin: 0 auto; /* Center the content */
+  width: 90%; /* Adjust the width as needed */
+  max-width: 1200px; /* Prevent it from stretching too wide */
+}
+
+.small-carousels-section {
+  margin: 20px 0;
+}
+
+.small-carousel-container {
+  margin-bottom: 20px;
+}
+
+.small-carousel-image {
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover; /* Ensures images are covered */
+}
+
+/* Small Boxes Section */
+.small-boxes-section {
+  margin: 0 3rem; /* Add left and right margins */
+}
+
+.small-boxes-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap if the screen is narrow */
+  margin: 20px 0; /* Space between carousel and small boxes */
+}
+
+.small-box {
+  flex: 1 1 18%; /* Each box takes up to 18% of the width */
+  margin: 10px; /* Space around each box */
+  background-color: #f9f9f9; /* Light background for boxes */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Ensures no overflow */
+  height: 20vw; /* Fixed height */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space between items */
+  text-align: center; /* Center text */
+}
+
+.small-box-image {
+  width: 100%; /* Full width */
+  height: auto; /* Auto height */
+  max-height: 70%; /* Limit height */
+  object-fit: cover; /* Ensure image covers area */
+}
+
+.small-box h4 {
+  margin: 10px 0; /* Space above and below text */
+}
+
+.small-box p {
+  margin: 0; /* Remove default margin */
+}
+
+/* Experience Section */
+.experience__content h2 {
+  font-size  : 2rem;
+  font-weight: 500;
+  margin-top : 1rem;
+  text-align:left;
+  margin-left: 2rem;
+}
+
+
+.counter__wrapper {
+  margin-top: 1.6rem;
+  gap: 2rem; /* Increased gap between counter boxes */
+  margin-left: 2rem;
+}
+
+.counter__box {
+  text-align: center; /* Center align the content */
+}
+
+.counter__box span {
+  width          : 90px; /* Increased from 70px */
+  height         : 90px; /* Increased from 70px */
+  margin         : 0 auto 0.5rem; /* Centered with bottom margin */
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  background     : var(--primary-color);
+  color          : #fff;
+  font-size      : 1.4rem; /* Slightly larger font */
+  font-weight    : 600;
+  border-radius  : 10px 5px 10px 5px;
+}
+
+.counter__box h6 {
+  font-size : 0.9rem; /* Slightly larger label */
+  color     : var(--secondary-color);
+}
+
